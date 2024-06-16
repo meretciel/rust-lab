@@ -1,0 +1,29 @@
+[package]
+name = "rust-lab"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+
+[[bin]]
+name="demo-1"
+path="src/bin/demo_1.rs"
+
+[[bin]]
+name="demo-2"
+path="src/bin/demo_2.rs"
+
+[[bin]]
+name="demo-3"
+path="src/bin/demo_3.rs"
+
+[[bin]]
+name="demo-4"
+path="src/bin/demo_4.rs"
+
+[[bin]]
+name="graph-lab"
+path="src/bin/graph_lab.rs"
