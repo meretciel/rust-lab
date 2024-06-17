@@ -107,8 +107,6 @@ impl Graph {
         self.low_points[root] = 1;
         self.generate_visual("0", Vec::new());
         self.build_dsf_tree_helper(root, 0);
-        self.output_counter += 1;
-        self.generate_visual(self.output_counter.to_string().as_str(), Vec::new());
     }
 
     fn build_dsf_tree_helper(&mut self, curr: usize, prev: usize) {
@@ -156,6 +154,8 @@ impl Graph {
         }
 
         self.colors[curr] = Graph::COLOR_VISITED_NODE.to_string();
+        self.output_counter += 1;
+        self.generate_visual(self.output_counter.to_string().as_str(), Vec::new());
     }
 }
 
