@@ -1,12 +1,12 @@
 [package]
-name = "rust-lab"
+name = "rust_lab"
 version = "0.1.0"
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-
+rand="0.8"
 
 [[bin]]
 name="demo-1"
@@ -27,3 +27,15 @@ path="src/bin/demo_4.rs"
 [[bin]]
 name="graph-lab"
 path="src/bin/graph_lab.rs"
+
+[[bin]]
+name="matrix_multiplication"
+path="src/bin/matrix_multiplication.rs"
+
+[[bin]]
+name="matrix_multiplication_simple"
+path="src/bin/matrix_multiplication_simple.rs"
+
+[[bin]]
+name="matrix_multiplication_multithreaded"
+path="src/bin/matrix_multiplication_multithreaded.rs"

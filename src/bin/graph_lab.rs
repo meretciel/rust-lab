@@ -103,13 +103,13 @@ impl Graph {
         writer.write("}".as_bytes()).expect("Failed to write to the output file.");
     }
 
-    fn build_dsf_tree(&mut self, root: usize) {
+    fn build_dfs_tree(&mut self, root: usize) {
         self.low_points[root] = 1;
         self.generate_visual("0", Vec::new());
-        self.build_dsf_tree_helper(root, 0);
+        self.build_dfs_tree_helper(root, 0);
     }
 
-    fn build_dsf_tree_helper(&mut self, curr: usize, prev: usize) {
+    fn build_dfs_tree_helper(&mut self, curr: usize, prev: usize) {
         self.curr_t += 1;
         self.visit_time[curr] = self.curr_t;
         self.colors[curr] = Graph::COLOR_PENDING_NODE.to_string();
@@ -127,7 +127,7 @@ impl Graph {
 
                 self.low_points[next_node] = self.visit_time[curr];
 
-                self.build_dsf_tree_helper(next_node, curr);
+                self.build_dfs_tree_helper(next_node, curr);
 
                 self.low_points[curr] = min(self.low_points[curr], self.low_points[next_node]);
 
@@ -179,7 +179,7 @@ fn main() {
     }
 
     let mut graph = Graph::from_adjacent_matrix(neighbors);
-    graph.build_dsf_tree(1);
+    graph.build_dfs_tree(1);
 
 
 
