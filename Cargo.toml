@@ -39,3 +39,7 @@ path="src/bin/matrix_multiplication_simple.rs"
 [[bin]]
 name="matrix_multiplication_multithreaded"
 path="src/bin/matrix_multiplication_multithreaded.rs"
+
+[[bin]]
+name="actor_system_attemp_2"
+path="src/bin/send_dyanmic_trait_through_channel.rs"
