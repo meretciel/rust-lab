@@ -25,6 +25,10 @@ name="demo-4"
 path="src/bin/demo_4.rs"
 
 [[bin]]
+name="demo_iteration"
+path="src/bin/demo_iteration.rs"
+
+[[bin]]
 name="graph-lab"
 path="src/bin/graph_lab.rs"
 
@@ -43,3 +47,7 @@ path="src/bin/matrix_multiplication_multithreaded.rs"
 [[bin]]
 name="actor_system_attemp_2"
 path="src/bin/send_dyanmic_trait_through_channel.rs"
+
+[[bin]]
+name="max_flow"
+path="src/bin/max_flow.rs"
