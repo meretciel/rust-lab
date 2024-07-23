@@ -130,8 +130,8 @@ impl Graph {
         writer.write("\tnode[shape=\"circle\", style=\"filled\", fillcolor=\"white\"];\n".as_bytes())
             .expect("Failed to write the output");
         writer.write("rankdir=LR;\n".as_bytes()).unwrap();
-        writer.write("{rank=same; x2;x3;}\n".as_bytes()).unwrap();
-        writer.write("{rank=same; x4;x5;}\n".as_bytes()).unwrap();
+        writer.write("{rank=same; x2;x3;x4}\n".as_bytes()).unwrap();
+        writer.write("{rank=same; x5;x6;x7}\n".as_bytes()).unwrap();
 
         // Create nodes
         for i in 1..=self.n {
@@ -286,7 +286,7 @@ impl Graph {
 }
 
 fn main() {
-    let path = Path::new("/home/ryan/workspace/tmp/graph_data/max_flow/exp_3_large");
+    let path = Path::new("/home/ryan/workspace/tmp/graph_data/max_flow/exp_4_large");
     if !path.exists() {
         std::fs::create_dir(path).expect("Failed to create the directory.");
     }

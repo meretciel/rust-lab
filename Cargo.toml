@@ -7,6 +7,9 @@ edition = "2021"
 
 [dependencies]
 rand="0.8"
+libm="0.2.8"
+memmap2="0.9.4"
+arrow="52.1.0"
 
 [[bin]]
 name="demo-1"
@@ -51,3 +54,15 @@ path="src/bin/send_dyanmic_trait_through_channel.rs"
 [[bin]]
 name="max_flow"
 path="src/bin/max_flow.rs"
+
+[[bin]]
+name="multiplicative_weights_update"
+path="src/bin/multiplicative_weights_update_algo.rs"
+
+[[bin]]
+name="leetcode_test1"
+path="src/bin/leetcode/test1.rs"
+
+[[bin]]
+name="mmp_examples_1"
+path="src/bin/mmp_examples/mmp_example_1.rs"
