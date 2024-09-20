@@ -17,7 +17,7 @@ fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync + 'static>> {
 
     let json_data = r#"
         {
-            "interval": "5 seconds",
+            "interval": "3 seconds",
             "modulate": false,
             "max_random_delay": 1
         }
@@ -53,8 +53,8 @@ fn main() -> Result<(), Box<dyn std::error::Error + Send + Sync + 'static>> {
 
     log4rs::init_config(config)?;
 
-    for k in 0..50 {
-        log::info!("Hello, world! {}", k);
+    for k in 0..8 {
+        log::info!("v2: Hello, world! {}", k);
         thread::sleep(Duration::from_secs(1))
     }
     Ok(())
