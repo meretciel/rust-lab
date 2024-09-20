@@ -874,6 +874,7 @@ dependencies = [
  "log4rs",
  "memmap2",
  "rand",
+ "serde",
  "serde_json",
 ]
 
