@@ -6,6 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+csv = "1.1"
 rand="0.8"
 libm="0.2.8"
 memmap2="0.9.4"
@@ -14,6 +15,7 @@ log="0.4.22"
 log4rs="1.3.0"
 serde_json = "1.0.120"
 serde = { version = "1.0.204", features = ["derive"] }
+nalgebra = "*"
 
 [[bin]]
 name="demo-1"
@@ -111,3 +113,15 @@ path="src/bin/python_code_clearning.rs"
 [[bin]]
 name="auto_diff"
 path="src/bin/gradient_descent/auto_diff.rs"
+
+[[bin]]
+name="finance_bond"
+path="src/bin/financial_models/bonds.rs"
+
+[[bin]]
+name="nelder_mead_algo"
+path="src/bin/optimization/nelder_mead_algo.rs"
+
+[[bin]]
+name="powell_algo"
+path="src/bin/optimization/powell_algo.rs"

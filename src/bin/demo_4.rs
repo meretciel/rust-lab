@@ -1,15 +1,25 @@
 
-trait SayHello {
-    fn hello(&self);
+
+trait Account<T> {
+    fn balance(&self) -> T;
 }
 
-struct Foo(i32);
+struct Chase<T> {
+    value: T
+}
 
-impl SayHello for Foo {
-    fn hello(&self) {
-        println!("hello from Foo");
+
+impl Account<i32> for Chase<i32> {
+    fn balance(&self) -> i32 {
+        100
     }
 }
+
+// impl<T> Account<T> for Chase<T> where T: Copy + !i32 {
+//     fn balance(&self) -> T {
+//         self.value
+//     }
+// }
 
 // impl<'a> SayHello for &'a Foo {
 //     fn hello(&self) {
@@ -18,12 +28,6 @@ impl SayHello for Foo {
 // }
 
 fn main() {
-    // let x = Foo(10);
-    // let y = &x;
-    // SayHello::hello(y);
-    let v = vec![1,2,3];
-    for item in (&v).into_iter() {
-        println!("{item}");
-    }
-    println!("{}", v.len());
+    let a:Chase<i32> = Chase{value: 10};
+    println!("{}", a.balance());
 }
