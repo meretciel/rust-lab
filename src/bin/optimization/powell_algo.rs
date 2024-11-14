@@ -125,7 +125,7 @@ where
                 to_increase_granularity = true;
             }
         }
-        
+
         let v = nu::mul(1. / norm_d, &d);
         let optimal_t = line_search(line_func_gen(&f, &curr_estimate, &v), -search_radius, search_radius, 2 * n_buckets);
         curr_estimate = nu::add(&curr_estimate, &nu::mul(optimal_t, &v));
