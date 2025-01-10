@@ -18,6 +18,7 @@ serde = { version = "1.0.204", features = ["derive"] }
 nalgebra = "*"
 conv = "*"
 chrono = "0.4.38"
+uuid = {version = "1.11.0", features = ["v4", "fast-rng", "macro-diagnostics"]}
 
 [[bin]]
 name="demo-1"
@@ -131,3 +132,8 @@ path="src/bin/optimization/powell_algo.rs"
 [[bin]]
 name="hnsw"
 path="src/bin/hierarchical_nagigable_small_world.rs"
+
+
+[[bin]]
+name = "worker_queue"
+path="src/bin/worker_queue_version_1.rs"
