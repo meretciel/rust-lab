@@ -137,3 +137,7 @@ path="src/bin/hierarchical_nagigable_small_world.rs"
 [[bin]]
 name = "worker_queue"
 path="src/bin/worker_queue_version_1.rs"
+
+[[bin]]
+name = "event_simulation"
+path="src/bin/event_simulation.rs"

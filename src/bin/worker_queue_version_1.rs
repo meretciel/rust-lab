@@ -37,7 +37,7 @@ enum ResponseMessage {
 struct Response {
     message_id: String,
     request_id: String,
-    data: Response,
+    data: ResponseMessage,
 }
 
 
