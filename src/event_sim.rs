@@ -7,7 +7,7 @@ pub trait Event {
     type EventType;
     fn timestamp(&self) -> f32;
     fn event_type(&self) -> Self::EventType;
-    fn event_i(&self) -> String;
+    fn event_id(&self) -> String;
     fn destination(&self) -> String;
 }
 
