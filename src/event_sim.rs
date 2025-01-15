@@ -9,9 +9,11 @@ pub trait Event {
     fn destination(&self) -> String;
 }
 
-pub trait EventQueue<E: Event> {
-    fn add(&mut self, event: E);
-    fn pop(&mut self) -> Option<E>;
+pub trait EventQueue {
+    type TyEvent: Event;
+
+    fn add(&mut self, event: Self::TyEvent);
+    fn pop(&mut self) -> Option<Self::TyEvent>;
 
     fn is_empty(&self) -> bool;
 }

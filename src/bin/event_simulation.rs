@@ -97,7 +97,7 @@ struct SimpleQueue<E> {
     queue: BinaryHeap<E>
 }
 
-impl<E: Ord> SimpleQueue<E> {
+impl<E: Ord + Event> SimpleQueue<E> {
     fn new() -> SimpleQueue<E> {
         SimpleQueue {
             queue: BinaryHeap::new()
@@ -105,8 +105,8 @@ impl<E: Ord> SimpleQueue<E> {
     }
 }
 
-impl<E> EventQueue<E> for SimpleQueue<E>
-where E: Ord + Event {
+impl<E: Ord + Event> EventQueue for SimpleQueue<E> {
+    type TyEvent = E;
     fn add(&mut self, event: E) {
         self.queue.push(event);
     }
