@@ -141,3 +141,11 @@ path="src/bin/worker_queue_version_1.rs"
 [[bin]]
 name = "event_simulation"
 path="src/bin/event_simulation.rs"
+
+[[bin]]
+name = "socket_demo"
+path = "src/bin/socket_demo.rs"
+
+[[bin]]
+name = "make-list-items"
+path = "src/bin/cli/make-list-items.rs"
